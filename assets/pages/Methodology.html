@@ -2,17 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./assets/images/svg/Favicon.svg"
-    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../images/svg/Favicon.svg" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
-    <title>
-      CoinCap.io | Reliable Cryptocurrency Prices and Market Capitalizations
-    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exchanges | CoinCap.io</title>
   </head>
   <body>
     <!-- TOP MENU  -->
@@ -20,7 +14,7 @@
       <a href="#">
         <img
           class="mark_white_svg"
-          src="./assets/images/svg/mark-white.svg"
+          src="../images/svg/mark-white.svg"
           alt="top_menu_svg"
         />
         <span
@@ -29,7 +23,7 @@
         </span>
         <img
           class="right_arrow_svg"
-          src="./assets/images/svg/right-arrow.svg"
+          src="../images/svg/right-arrow.svg"
           alt="right_arrow_svg"
         />
       </a>
@@ -39,8 +33,8 @@
       <section class="desk_nav container">
         <div class="left_side">
           <ul>
-            <li><a href="./index.html">Coins</a></li>
-            <li><a href="./assets/pages/Exchanges.html">Exchanges</a></li>
+            <li><a href="../../index.html">Coins</a></li>
+            <li><a href="./Exchanges.html">Exchanges</a></li>
             <li><a href="#" data-modal-target="#modal">Contact us</a></li>
             <div class="modal" id="modal">
               <div class="modal_header">
@@ -90,7 +84,7 @@
         <div class="middle">
           <img
             class="menu_logo"
-            src="./assets/images/svg/menu-logo.svg"
+            src="../images/svg/menu-logo.svg"
             alt="menu-logo"
           />
         </div>
@@ -111,33 +105,76 @@
       </section>
     </nav>
     <!-- COINS AREA -->
-    <div class="container-fluid coins_area">
+    <div class="container-fluid method_area">
       <div class="wrap_back"></div>
-      <div class="row_details container">
-        <ul>
-          <li class="li_details">Market Cap <br />$2.58t</li>
-          <li class="li_details">Exchange Vol <br />$93.09b</li>
-          <li class="li_details">Assets<br />2,299</li>
-          <li class="li_details">Exchanges<br />116</li>
-          <li class="li_details">Markets<br />7,177</li>
-          <li class="li_details">BTC Dom Index<br />41.7%</li>
-        </ul>
-      </div>
-      <div class="coins_table container">
-        <div class="table_row">
-          <div class="rank_row row_items">Rank</div>
-          <div class="name_row row_items">Name</div>
-          <div class="price_row row_items">Price</div>
-          <div class="marketcap_row row_items">Market Cap</div>
-          <div class="VWAP_row row_items">VWAP (24Hr)</div>
-          <div class="supply_row row_items">Supply</div>
-          <div class="volume_row row_items">Volume (24Hr)</div>
-          <div class="change_row row_items">Change (24Hr)</div>
+      <div class="list_method_wrap container-fluid">
+        <div class="list_method container">
+          <a href="#">Market Breakdown</a>
+          <a href="#">Methodology</a>
+          <a href="#">Outlier Detection</a>
+          <a href="#">CoinCap Rank</a>
         </div>
       </div>
-    </div>
-    <div class="view_more">
-      <a href="#" class="view_btn" id="more">View More</a>
+      <div class="p_head_method container">
+        <p>
+          Welcome to CoinCap, your reliable source for cryptocurrency market
+          data
+        </p>
+      </div>
+      <div class="method_one container-fluid">
+        <div class="method_one container">
+          <div class="left_method_one">
+            <img src="../images/other/laptop.png" alt="laptop" />
+          </div>
+          <div class="right_method_one">
+            CoinCap's goal is to give you the most real-time view of
+            cryptocurrency trading taking place around the world. Built to meet
+            the needs of cryptocurrency enthusiasts, CoinCap adapts to the
+            unique demands of cryptocurrency markets.
+          </div>
+        </div>
+        <div class="bot"></div>
+      </div>
+      <div class="method_two container-fluid">
+        <p>Crypto Market Vs. Traditional Market</p>
+        <div class="method_two_compare">
+          <div class="left_side_compare">
+            <p>Cryptocurrency Market</p>
+            <p>Constant activity, no open or close of trading</p>
+            <p>Assets are sold across many exchanges</p>
+            <p>
+              Digital assets can be purchased with a variety of methods,
+              including fiat currency and cryptocurrency
+            </p>
+            <p>Less standardization on how exchanges operate</p>
+          </div>
+          <div class="right_side_compare">
+            <p>Traditional Market</p>
+            <p>
+              Trading floor opens and closes; not available on nights and
+              weekends
+            </p>
+            <p>Commodities only available to purchase from select exchanges</p>
+            <p>Purchasing options limited to fiat</p>
+            <p>Exchange operations are highly regulated with many standards</p>
+          </div>
+        </div>
+        <div class="method_two_p_1">
+          <p>
+            By aggregating exchange data from around the world, we provide fast
+            calculations with controls to detect and remove outliers. This
+            ensures that you're always seeing the prices that best represent the
+            global market 'as-is.'
+          </p>
+        </div>
+        <div class="method_two_p_2">
+          <p>
+            Continue reading to learn more about how price is calculated, how
+            outliers are detected, and other mechanics that contribute to data
+            represented on CoinCap.
+          </p>
+        </div>
+      </div>
     </div>
     <!-- FOOTER SECTION -->
     <footer class="container-fluid footer_section">
@@ -145,7 +182,7 @@
         <div class="footer_item">
           <h4>COINCAP.IO</h4>
           <ul>
-            <li><a href="./assets/pages/Methodology.html">Methodology</a></li>
+            <li><a href="./Methodology.html">Methodology</a></li>
             <li>
               <a href="https://shapeshift.zendesk.com/hc/en-us/requests/new"
                 >Support</a
@@ -198,14 +235,14 @@
             <li>
               <a
                 href="https://play.google.com/store/apps/details?id=io.coinCap.coinCap"
-                ><img src="./assets/images/svg/google_play.svg" alt="google-play"
+                ><img src="../images/svg/google_play.svg" alt="google-play"
               /></a>
             </li>
             <li>
               <a
                 href="https://itunes.apple.com/us/app/coincap/id1074052280?mt=8&ign-mpt=uo%3D4"
               >
-                <img src="./assets/images/svg/apple_store.svg" alt="apple-store"
+                <img src="../images/svg/apple_store.svg" alt="apple-store"
               /></a>
             </li>
           </ul>
@@ -213,6 +250,6 @@
       </div>
     </footer>
     <div id="overlay"></div>
-    <script src="./assets/js/main.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>

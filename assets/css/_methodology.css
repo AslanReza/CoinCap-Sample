@@ -1,0 +1,116 @@
+.method_area {
+  position: relative;
+}
+.list_method_wrap {
+  background: linear-gradient(to right, #18c683, #18b2c6) !important;
+  text-align: center;
+}
+.list_method {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0px;
+}
+.list_method a {
+  color: white;
+  font-size: 14px;
+}
+.list_method a:hover {
+  color: rgb(57, 57, 255);
+  text-shadow: 0px 0px 1px black;
+}
+.p_head_method p {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  padding: 32px 0px;
+}
+.method_one {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.left_method_one {
+  width: 50%;
+}
+
+.left_method_one img {
+  width: 548px;
+}
+.right_method_one {
+  font-size: 14px;
+}
+.bot {
+  background-color: #fdfdfd;
+  position: absolute;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+  z-index: -1001;
+}
+.method_two {
+  background-color: #fdfdfd;
+  background-image: url(../images/other/download.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 800px;
+padding-bottom: 64px;
+}
+.method_two p {
+  text-align: center;
+  font-size: 28px;
+}
+.method_two_compare {
+  display: flex;
+  padding: 46px;
+  justify-content: center;
+  align-items: stretch;
+}
+.left_side_compare {
+  width: 33%;
+  text-align: left !important;
+  color: #646464;
+  border-right: 1px solid rgb(238, 238, 238);
+}
+.right_side_compare {
+  width: 33%;
+  color: #646464;
+  border-left: 1px solid rgb(238, 238, 238);
+}
+
+.left_side_compare p,
+.right_side_compare p {
+  padding: 32px;
+}
+.left_side_compare p {
+  font-size: 18px;
+  text-align: right;
+}
+.right_side_compare p {
+  text-align: left;
+  font-size: 18px;
+}
+.method_two_p_1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  width: 100%;
+}
+.method_two_p_1 p {
+  color: #646464;
+  width: 60%;
+  font-size: 18px;
+}
+.method_two_p_2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 16px;
+}
+.method_two_p_2 p {
+  color: #646464;
+  width: 60%;
+  font-size: 18px;
+}

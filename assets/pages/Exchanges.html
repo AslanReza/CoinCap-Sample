@@ -2,17 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./assets/images/svg/Favicon.svg"
-    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../images/svg/Favicon.svg" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
-    <title>
-      CoinCap.io | Reliable Cryptocurrency Prices and Market Capitalizations
-    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exchanges | CoinCap.io</title>
   </head>
   <body>
     <!-- TOP MENU  -->
@@ -20,7 +14,7 @@
       <a href="#">
         <img
           class="mark_white_svg"
-          src="./assets/images/svg/mark-white.svg"
+          src="../images/svg/mark-white.svg"
           alt="top_menu_svg"
         />
         <span
@@ -29,7 +23,7 @@
         </span>
         <img
           class="right_arrow_svg"
-          src="./assets/images/svg/right-arrow.svg"
+          src="../images/svg/right-arrow.svg"
           alt="right_arrow_svg"
         />
       </a>
@@ -39,8 +33,8 @@
       <section class="desk_nav container">
         <div class="left_side">
           <ul>
-            <li><a href="./index.html">Coins</a></li>
-            <li><a href="./assets/pages/Exchanges.html">Exchanges</a></li>
+            <li><a href="../../index.html">Coins</a></li>
+            <li><a href="./Exchanges.html">Exchanges</a></li>
             <li><a href="#" data-modal-target="#modal">Contact us</a></li>
             <div class="modal" id="modal">
               <div class="modal_header">
@@ -90,7 +84,7 @@
         <div class="middle">
           <img
             class="menu_logo"
-            src="./assets/images/svg/menu-logo.svg"
+            src="../images/svg/menu-logo.svg"
             alt="menu-logo"
           />
         </div>
@@ -111,9 +105,9 @@
       </section>
     </nav>
     <!-- COINS AREA -->
-    <div class="container-fluid coins_area">
+    <div class="container-fluid exchange_area">
       <div class="wrap_back"></div>
-      <div class="row_details container">
+      <div class="exchange_row_details container">
         <ul>
           <li class="li_details">Market Cap <br />$2.58t</li>
           <li class="li_details">Exchange Vol <br />$93.09b</li>
@@ -123,17 +117,27 @@
           <li class="li_details">BTC Dom Index<br />41.7%</li>
         </ul>
       </div>
-      <div class="coins_table container">
-        <div class="table_row">
+      <div class="exchange_table container">
+        <div class="exchange_table_row">
           <div class="rank_row row_items">Rank</div>
           <div class="name_row row_items">Name</div>
-          <div class="price_row row_items">Price</div>
-          <div class="marketcap_row row_items">Market Cap</div>
-          <div class="VWAP_row row_items">VWAP (24Hr)</div>
-          <div class="supply_row row_items">Supply</div>
+          <div class="trading_row row_items">Trading Pairs</div>
+          <div class="top_row row_items">Top Pair</div>
           <div class="volume_row row_items">Volume (24Hr)</div>
-          <div class="change_row row_items">Change (24Hr)</div>
+          <div class="total_row row_items">Total (%)</div>
+          <div class="status_row row_items">Status</div>
         </div>
+        <!-- <div class="exchange_table_row">
+          <div class="rank_row exchange_cells">1</div>
+          <div class="name_row exchange_cells">Binance</div>
+          <div class="trading_row exchange_cells">724</div>
+          <div class="top_row exchange_cells">BTC/USDT</div>
+          <div class="volume_row exchange_cells">$7.17b</div>
+          <div class="total_row exchange_cells">30.44%</div>
+          <div class="status_row exchange_cells">
+            <div class="socket green"></div>
+          </div>
+        </div> -->
       </div>
     </div>
     <div class="view_more">
@@ -145,7 +149,7 @@
         <div class="footer_item">
           <h4>COINCAP.IO</h4>
           <ul>
-            <li><a href="./assets/pages/Methodology.html">Methodology</a></li>
+            <li><a href="./Methodology.html">Methodology</a></li>
             <li>
               <a href="https://shapeshift.zendesk.com/hc/en-us/requests/new"
                 >Support</a
@@ -198,14 +202,14 @@
             <li>
               <a
                 href="https://play.google.com/store/apps/details?id=io.coinCap.coinCap"
-                ><img src="./assets/images/svg/google_play.svg" alt="google-play"
+                ><img src="../images/svg/google_play.svg" alt="google-play"
               /></a>
             </li>
             <li>
               <a
                 href="https://itunes.apple.com/us/app/coincap/id1074052280?mt=8&ign-mpt=uo%3D4"
               >
-                <img src="./assets/images/svg/apple_store.svg" alt="apple-store"
+                <img src="../images/svg/apple_store.svg" alt="apple-store"
               /></a>
             </li>
           </ul>
@@ -213,6 +217,6 @@
       </div>
     </footer>
     <div id="overlay"></div>
-    <script src="./assets/js/main.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
