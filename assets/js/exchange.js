@@ -31,7 +31,9 @@ function renderExchange(data) {
   volumeUsd.classList.add("volume_row");
 
   let percentTotal = document.createElement("div");
-  percentTotal.textContent = numeral(data.percentTotalVolume).format("(0.00%)");
+  percentTotal.textContent = numeral(data.percentTotalVolume / 100).format(
+    "(0.00%)"
+  );
   percentTotal.classList.add("row_items");
   percentTotal.classList.add("total_row");
 
@@ -43,8 +45,10 @@ function renderExchange(data) {
   socketUnitColor.classList.add("socket");
   if (data.socket === true) {
     socketUnitColor.classList.add("green");
+    socketUnitColor.classList.add("pulse_green");
   } else {
     socketUnitColor.classList.add("red");
+    socketUnitColor.classList.add("pulse_red");
   }
 
   socketUnit.appendChild(socketUnitColor);
@@ -64,11 +68,11 @@ function renderExchange(data) {
 let exchangesBaseUrl = "https://api.coincap.io/v2";
 let exchangesCurrentOffset = 0;
 async function getExchangesList() {
-  let exchangesAssetsUrl =
+  let AssetsUrl =
     "https://api.coincap.io/v2/exchanges?offset=" +
     exchangesCurrentOffset +
-    "&limit=26";
-  let response = await fetch(exchangesAssetsUrl);
+    "&limit=20";
+  let response = await fetch(AssetsUrl);
   let body = await response.json();
   return body.data;
 }
@@ -114,7 +118,7 @@ function removeLoadingExchanges() {
 renderLoadingExchanges();
 renderExchangesList()
   .catch(function (error) {
-    renderError("Error is Here!");
+    renderError(error.toString());
   })
   .finally(function () {
     removeLoadingExchanges();
