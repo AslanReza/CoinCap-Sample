@@ -56,7 +56,10 @@ function renderCoin(data) {
   volume.classList.add("coin_volume");
 
   let change = document.createElement("div");
-  change.textContent = numeral(data.changePercent24Hr).format("(0.00%)");
+  change.textContent = numeral(data.changePercent24Hr / 100).format("0.00%");
+  data.changePercent24Hr > 0
+    ? change.classList.add("green_cell")
+    : change.classList.add("red_cell");
   change.classList.add("coin_cells");
   change.classList.add("coin_change");
 
@@ -135,109 +138,3 @@ renderCoinsList()
   .finally(function () {
     removeLoading();
   });
-
-// CONTACT US MODAL
-const openModalButtons = document.querySelectorAll("[data-modal-target]");
-const closeModalButtons = document.querySelectorAll("[data-close-button]");
-const overlay = document.getElementById("overlay");
-
-openModalButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const modal = document.querySelector(button.dataset.modalTarget);
-    openModal(modal);
-  });
-});
-
-overlay.addEventListener("click", () => {
-  const modals = document.querySelectorAll(".modal.active");
-  modals.forEach((modal) => {
-    closeModal(modal);
-  });
-});
-
-closeModalButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const modal = button.closest(".modal");
-    closeModal(modal);
-  });
-});
-
-function openModal(modal) {
-  if (modal == null) return;
-  modal.classList.add("active");
-  overlay.classList.add("active");
-}
-
-function closeModal(modal) {
-  if (modal == null) return;
-  modal.classList.remove("active");
-  overlay.classList.remove("active");
-}
-
-// // EXCHANGES
-// let exchangeTable = document.querySelector(".exchange_table");
-
-// function renderExchange() {
-//   let exchangeTableRow = document.createElement("div");
-//   exchangeTableRow.classList.add("exchange_table_row");
-
-//   let rank = document.createElement("div");
-//   rank.textContent = data.rank;
-//   rank.classList.add("exchange_cells");
-//   rank.classList.add("rank_row");
-
-//   let nameContainer = document.createElement("div");
-//   nameContainer.classList.add("exchange_cells");
-//   nameContainer.classList.add("name_row");
-//   nameContainer.textContent = data.name;
-
-//   let tradingPairs = document.createElement("div");
-//   tradingPairs.textContent = data.tradingPairs;
-//   tradingPairs.classList.add("exchange_cells");
-//   tradingPairs.classList.add("trading_row");
-
-//   let topPair = document.createElement("div");
-//   topPair.textContent = "BTC/USDT"
-//   topPair.classList.add("exchange_cells");
-//   topPair.classList.add("top_row");
-
-//   let volume = document.createElement("div");
-//   volume.textContent = numeral(data.volumeUsd24Hr).format("($0.00a)");
-//   volume.classList.add("exchange_cells");
-//   volume.classList.add("volume_row");
-
-//   let total = document.createElement("div");
-//   total.textContent = numeral(data.percentTotalVolume).format("(0.00%)");
-//   total.classList.add("exchange_cells");
-//   total.classList.add("total_row");
-
-//   exchangeTableRow.appendChild(rank);
-//   exchangeTableRow.appendChild(nameContainer);
-//   exchangeTableRow.appendChild(tradingPairs);
-//   exchangeTableRow.appendChild(marketCap);
-//   exchangeTableRow.appendChild(VWAP);
-//   exchangeTableRow.appendChild(supply);
-//   exchangeTableRow.appendChild(volume);
-//   exchangeTableRow.appendChild(change);
-
-//   exchangeTable.appendChild(exchangeTableRow);
-// }
-
-// // FETCH
-// let exbaseUrl = "https://api.coincap.io/v2";
-// let excurrentOffset = 0;
-// async function getExchangesList() {
-//   let assetsUrl =
-//     "https://api.coincap.io/v2/exchanges?offset=" + excurrentOffset + "&limit=20";
-//   let response = await fetch(assetsUrl);
-//   let body = await response.json();
-//   return body.data;
-// }
-// async function renderExchangesList() {
-//   let List = await getExchangesList();
-//   for (let i = 0; i < List.length; i++) {
-//     let item = List[i];
-//     renderCoin(item);
-//   }
-// }
-// renderExchangesList()
