@@ -53,20 +53,25 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
 }
 .left_side ul {
   display: flex;
   flex-direction: row;
   list-style: none;
-}
+  }
 .left_side ul li {
-  padding: 0px 12px;
+  padding: 16px 12px;
+}
+.left_side ul li:hover{
+  background-color: #F7F7F7;
 }
 .menu_logo {
   width: 84px;
   vertical-align: middle;
-  padding: 4px 0px;
+  padding: 16px 6px;
+}
+.menu_logo:hover{
+  background-color: #F7F7F7;
 }
 .gear_box,
 .search_box {
@@ -179,6 +184,15 @@ body {
   padding: 4px 8px;
   text-align: left;
   font-size: 14px;
+}
+.coin_change{
+  text-align: center;
+}
+.red_cell{
+  color: red!important;
+}
+.green_cell{
+  color:green;
 }
 .view_btn {
   padding: 10px 28px;
