@@ -86,8 +86,8 @@ async function renderExchangesList() {
 
 // VIEW MORE BUTTON
 let moreButtonExchanges = document.querySelector("#more");
-
-moreButtonExchanges.addEventListener("click", function () {
+moreButtonExchanges.addEventListener("click", function (e) {
+e.preventDefault();
   exchangesCurrentOffset += 20;
   renderExchangesList();
 });

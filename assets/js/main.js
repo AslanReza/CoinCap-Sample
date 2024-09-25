@@ -102,7 +102,8 @@ async function renderCoinsList() {
 // VIEW MORE BUTTON
 let moreButton = document.querySelector("#more");
 
-moreButton.addEventListener("click", function () {
+moreButton.addEventListener("click", function (e) {
+  e.preventDefault();
   currentOffset += 20;
   renderCoinsList();
 });
